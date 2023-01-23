@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+    <style>
+        * {
+            transition: 0.2s;
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrap {
+            border-radius: 10px;
+            background: gray;
+            color: honeydew;
+        }
+
+        .result {
+            width: 400px;
+            overflow: hidden;
+            padding: 0px;
+            height: 70px;
+            line-height: 70px;
+            margin: 15px;
+            border: none;
+            border-bottom: 2px solid lightgray;
+            border-radius: 4px;
+        }
+
+        div {
+            border-radius: 4px;
+            user-select: none;
+            padding: 30px;
+        }
+
+
+
+        td {
+            font-size: 25px;
+            font-weight: bolder;
+            cursor: pointer;
+            text-align: center;
+            height: 100px;
+            width: 100px;
+            border: 1px solid lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <table>
+            <tr>
+                <td colspan="4">
+                    <div class="result"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="one" onclick="cliOne()">1</div>
+                </td>
+                <td>
+                    <div class="two" onclick="cliTwo()">2</div>
+                </td>
+                <td>
+                    <div class="three" onclick="cliThree()">3</div>
+                </td>
+                <td>
+                    <div class="addition" onclick="cliAdd()">+</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="four" onclick="cliFour()">4</div>
+                </td>
+                <td>
+                    <div class="five" onclick="cliFive()">5</div>
+                </td>
+                <td>
+                    <div class="six" onclick="cliSix()">6</div>
+                </td>
+                <td>
+                    <div class="subtraction" onclick="cliSub()">-</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="seven" onclick="cliSeven()">7</div>
+                </td>
+                <td>
+                    <div class="eight" onclick="cliEight()">8</div>
+                </td>
+                <td>
+                    <div class="nine" onclick="cliNine()">9</div>
+                </td>
+                <td>
+                    <div class="multiplication" onclick="cliMult()">×</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="zero" onclick="cliZero()">0</div>
+                </td>
+                <td>
+                    <div class="dot" onclick="cliDot()">.</div>
+                </td>
+                <td>
+                    <div class="dlzero" onclick="cliDlzero()">00</div>
+                </td>
+                <td>
+                    <div class="devision" onclick="cliDivs()">÷</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="ac" onclick="cliAC()">AC</div>
+                </td>
+                <td>
+                    <div class="ce" onclick="cliCE()">CE</div>
+                </td>
+                <td colspan="2">
+                    <div class="equal" onclick="cliEqual()">=</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        // 定义变量
+        var oResult = document.querySelector('.result')
+        var oOne = document.querySelector('.one')
+        var oTwo = document.querySelector('.two')
+        var oThree = document.querySelector('.three')
+        var oFour = document.querySelector('.four')
+        var oFive = document.querySelector('.five')
+        var oSix = document.querySelector('.six')
+        var oSeven = document.querySelector('.seven')
+        var oEight = document.querySelector('.eight')
+        var oNine = document.querySelector('.nine')
+        var oZero = document.querySelector('.zero')
+        var oDlzero = document.querySelector('.dlzero')
+        var oDot = document.querySelector('.dot')
+        var oAddition = document.querySelector('.addition')
+        var oSubtraction = document.querySelector('.subtraction')
+        var oMultiplication = document.querySelector('.multiplication')
+        var oDivision = document.querySelector('.devision')
+        var oEqual = document.querySelector('.equal')
+        var oAC = document.querySelector('.ac')
+        var oCE = document.querySelector('.ce')
+        //绑定按钮
+        function cliOne() {
+            oResult.innerHTML += oOne.innerHTML
+        }
+
+        function cliTwo() {
+            oResult.innerHTML += oTwo.innerHTML
+        }
+
+        function cliThree() {
+            oResult.innerHTML += oThree.innerHTML
+        }
+
+        function cliFour() {
+            oResult.innerHTML += oFour.innerHTML
+        }
+
+        function cliFive() {
+            oResult.innerHTML += oFive.innerHTML
+        }
+
+        function cliSix() {
+            oResult.innerHTML += oSix.innerHTML
+        }
+
+        function cliSeven() {
+            oResult.innerHTML += oSeven.innerHTML
+        }
+
+        function cliEight() {
+            oResult.innerHTML += oEight.innerHTML
+        }
+
+        function cliNine() {
+            oResult.innerHTML += oNine.innerHTML
+        }
+
+        function cliZero() {
+            oResult.innerHTML += oZero.innerHTML
+        }
+
+        function cliDot() {
+            oResult.innerHTML += oDot.innerHTML
+        }
+
+        function cliAdd() {
+            oResult.innerHTML += oAddition.innerHTML
+        }
+
+        function cliSub() {
+            oResult.innerHTML += oSubtraction.innerHTML
+        }
+
+        function cliMult() {
+            oResult.innerHTML += "*"
+        }
+
+        function cliDivs() {
+            oResult.innerHTML += "/"
+        }
+
+        function cliDlzero() {
+            oResult.innerHTML += oDlzero.innerHTML
+        }
+        //全部清除
+        function cliAC() {
+            oResult.innerHTML = ""
+        }
+        //删除
+        function cliCE() {
+            oResult.innerHTML = oResult.innerHTML.substr(0, oResult.innerHTML.length - 1);
+        }
+        //等号
+        function cliEqual() {
+            oResult.innerHTML = eval(oResult.innerHTML)
+            if (oResult.innerHTML == Infinity) {
+                setTimeout(() => {
+                    oResult.innerHTML = ""
+                }, 1000);
+            }
+        }
+    </script>
+</body>
+
+</html>

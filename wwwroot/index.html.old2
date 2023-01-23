@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+</head>
+<body>
+    <!-- 表单域 form 表单域action url 地址 method 提交方式 name 表单名称-->
+    <form method = "POST" name="注册表" action="mysql_cgi">
+        <!-- input type 属性值 -->
+        <!-- text 正常显示 password  -->
+        用户名：<input type="text" name = "username"> <br/>
+        密码：<input type="password" name = "password"> <br/>
+        <input type=submit value="注册"> 
+    </form>
+</body>
+</html>
